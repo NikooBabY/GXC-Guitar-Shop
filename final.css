@@ -1,0 +1,62 @@
+.wrapper{
+    width: 1024px;
+    margin: auto;
+}
+
+.header{
+    width: 1024px;
+    height: 100px;
+    float: left;
+    background: white;
+    
+}
+
+.header-text{
+    position: relative;
+    font-size: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    top: 13px;
+    text-align: center;
+}
+
+.banner{
+    width: 1024px;
+    height: 600px;
+    float: left;
+    margin-top: 10px;
+    background-image: url(Images/banner.jpg);
+    background-size: 1024px 600px;
+}
+
+.Reviews{
+    width: 1024px;
+    height: 400px;
+    float: left;
+    margin-top: 10px;
+    color: bisque;
+}
+
+.reviews-left{
+    width: 320px;
+    height: 380px;
+    float: left;
+    margin: 10px;
+    color: aqua;
+}
+
+.reviews-mid{
+    width: 320px;
+    height: 380px;
+    float: left;
+    margin: 10px;
+    color: aqua;
+}
+
+.reviews-right{
+    width: 320px;
+    height: 380px;
+    float: left;
+    margin: 10px;
+    color: aqua;
+}
