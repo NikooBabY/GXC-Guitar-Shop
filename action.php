@@ -70,6 +70,7 @@ if(isset($_POST['addproduct']))
 
         $query = "insert into products2 (id,instruments,price,description,model,newproimage) values(NULL, '$instruments', '$price', '$description', '$model', '$newproimage' )";
         $conn->query($query);
+        header("location:index.php");
 
     }
 
@@ -86,9 +87,9 @@ if(isset($_GET['comments'])){
     $uid = $_SESSION['userid'];
     if ($uid){
         $query = "INSERT INTO comment(id, productid, comments, userid)
-                VALUES (NULL, '$productid', '$comments', '$uid', NULL)";
+                VALUES (NULL, '$productid', '$comments', '$uid')";
         $conn->query($query);
-        header('location:displaypro.php?id='.$productid);
+        header('location:index.php?id='.$productid);
     }else{
         header('location:login.php');
     }
@@ -106,7 +107,7 @@ if(isset($_POST['updateproducts']))
 
     $query = "update products2 set model='$model', price='$price', instruments='$instruments', description='$description' where id='$id' ";
     $conn->query($query);
-    header("location:displaypro.php");
+    header("location:electric.php");
 
 
 
@@ -123,7 +124,7 @@ if(isset($_GET['product_del_id'])){
     $conn->query($query);
     $img = $data['newproimage'];
     unlink("Product_images/".$img);
-    header("location:displaypro.php");
+    header("location:index.php");
 
 }
 

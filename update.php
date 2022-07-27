@@ -1,7 +1,14 @@
-<?php 
- include ('database.php');
-?> 
+<?php
+session_start();
+include ('database.php');
+error_reporting(0);
+ini_set('display_errors', 0);
+$userid = $_SESSION['userid'];
+$query = "SELECT * FROM final2 WHERE id='$userid'";
+$result = $conn->query($query);
+$userdata = $result->fetch_assoc();
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +20,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!--<link type="text/css" rel="stylesheet" href="card.css" --> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update Products</title>
 </head>
 <body>
-    <?php include ('navbar2.php') ?>
+    <?php include ('navbar.php') ?>
     <?php 
         $id = $_GET['id'];
         $query = "select * from products2 where id='$id'";
@@ -62,7 +69,14 @@
     </div>
     <br>
 
-    <button type="submit" class="btn btn-primary btn-block mb-4" name="updateproducts">Update</button>
+    <button type="submit" class="btn btn-primary btn-block mb-4" name="updateproducts" onclick="myFunction()">Update</button>
+        <script>
+            function myFunction() {
+            alert("Product has been updated.");
+            }
+        </script>
     </form>
+
+    <?php include'footer.php' ?>
 </body>
 </html>

@@ -17,7 +17,7 @@ ini_set('display_errors', 0);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!--<link type="text/css" rel="stylesheet" href="card.css" --> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Products</title>
 </head>
 <body>
 <?php include('navbar.php') ?>
@@ -59,7 +59,12 @@ ini_set('display_errors', 0);
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" placeholder="Description" style="height: 275px; width: 360px;"></textarea>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary btn-block mb-4" name="addproduct">Submit  </button>
+            <button type="submit" class="btn btn-primary btn-block mb-4" name="addproduct" onclick="myFunction()">Submit  </button>
+            <script>
+            function myFunction() {
+                alert("Product has been added.");
+                }
+            </script>
         </div>
 
 

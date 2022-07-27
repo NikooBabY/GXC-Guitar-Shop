@@ -19,7 +19,7 @@ $userdata = $result->fetch_assoc();
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!--<link type="text/css" rel="stylesheet" href="card.css" --> 
-    <title>Products</title>
+    <title>Electrics</title>
     <link rel="stylesheet" href="responsive.css" type="text/css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@ $userdata = $result->fetch_assoc();
                 
 
                 <?php if($userdata['admin'] == 1) { ?>
-                <a href="action.php?product_del_id=<?php echo $data['id'];?>" style="text-decoration: none;">Delete</a>
+                <a href="action.php?product_del_id=<?php echo $data['id'];?>" style="text-decoration: none;" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
                 <a href="update.php?id=<?php echo $data['id']; ?>" style="text-decoration: none;">Update</a>
                 <?php } ?>
                 

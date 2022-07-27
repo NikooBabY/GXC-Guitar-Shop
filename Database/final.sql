@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2022 at 12:20 PM
+-- Generation Time: Jul 27, 2022 at 02:59 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -39,10 +39,9 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `productid`, `comments`, `userid`) VALUES
-(1, 10, 'Very nice', 1),
-(2, 2, 'sualjhsdafk\r\n', 1),
-(3, 2, 'sdf', 0),
-(4, 2, 'amsdfm', 0);
+(12, 3, 'Good Guitar at good Price.', 18),
+(13, 4, 'Good Les paul Guitar.', 18),
+(14, 1, 'Good Guitar', 20);
 
 -- --------------------------------------------------------
 
@@ -65,16 +64,10 @@ CREATE TABLE `final2` (
 --
 
 INSERT INTO `final2` (`id`, `first_name`, `last_name`, `username`, `password`, `email`, `admin`) VALUES
-(1, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0),
-(2, 'Rupak', 'Rajbanshi', 'rupitupi', '93373a70fe807888d0b32176d366bedf', 'rupitupi@gmail.com', 0),
 (3, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 1),
-(4, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0),
-(5, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0),
-(6, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0),
-(7, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0),
-(8, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0),
-(9, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0),
-(10, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', '', 0);
+(18, 'Sulav', 'Karki', 'SulavKarki', 'cc03e747a6afbbcbf8be7668acfebee5', 'karkisulav31@gmail.com', 0),
+(19, 'Sulav', 'Karki', 'SulavKarki', 'cc03e747a6afbbcbf8be7668acfebee5', 'karkisulav31@gmail.com', 0),
+(20, 'Sulav', 'Karki', 'SulavKarki', '098f6bcd4621d373cade4e832627b4f6', 'karkisulav31@gmail.com', 0);
 
 -- --------------------------------------------------------
 
@@ -99,10 +92,9 @@ INSERT INTO `products2` (`id`, `instruments`, `price`, `description`, `model`, `
 (1, 'Electric Guitar', '$559.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'Squier Bullet Mustang', '125320_CP_.jpg'),
 (2, 'Electric Guitar', '$449.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'Squier Classic Vibe', '489711_CP_.jpg'),
 (3, 'Electric Guitar', '$1999.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'Gretsch G5222 Electromatic', '147516_CP_.jpg'),
-(4, 'Electric Guitar', '$3999.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'Gibson Les Paul', '167600_CP_.jpg'),
+(4, 'Electric Guitar', '$3999.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.1234', 'Gibson Les Paul', '167600_CP_.jpg'),
 (5, 'Electric Guitar', '$299.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'Ibanez Electromagnet 33', '506277_CP_.jpg'),
 (6, 'Electric Guitar', '$499.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'PRS SE Custom 24', '106932_CP_.jpg'),
-(7, 'Electric Guitar', '$1099.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'PRS SE Hollowbody', '413558_CP_.jpg'),
 (8, 'Electric Guitar', '$699.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'Ibanez Genesis Collection', '31719_CP_.jpg'),
 (9, 'Acoustic Guitar', '$199.99', 'No matter your budget, style or tonal expectations, we are sure to help you find your musical companion. Read on to see our top picks, or jump to the end of this piece for some handy buying advice that will guide you through purchasing one of these fabulous guitars.', 'Hex Sting P300HB', '636025_CP_.jpg'),
 (10, 'Acoustic Guitar', '$199.99', 'No matter your budget, style or tonal expectations, we are sure to help you find your musical companion. Read on to see our top picks, or jump to the end of this piece for some handy buying advice that will guide you through purchasing one of these fabulous guitars.', 'Stagg C542 Classical', '933830_CP_.jpg'),
@@ -131,7 +123,8 @@ INSERT INTO `products2` (`id`, `instruments`, `price`, `description`, `model`, `
 (34, 'New Arrivals', '$199.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'Limited Edition Vintera® \'70s Telecaster® Deluxe', '327606_CP_.jpg'),
 (35, 'New Arrivals', '$199.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'JV Modified \'60s Stratocaster®', '20407_CP_.jpg'),
 (36, 'New Arrivals', '$199.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'American Acoustasonic® Telecaster® All-Mahogany', '995768_CP_.jpg'),
-(37, 'New Arrivals', '$199.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'American Acoustasonic® Telecaster® All-Mahogany', '199980_CP_.jpg');
+(37, 'New Arrivals', '$199.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'American Acoustasonic® Telecaster® All-Mahogany', '199980_CP_.jpg'),
+(56, 'Electric Guitar', '$999.99', 'The JV Modified Series combines classic aesthetics with modern playability to suit the needs of today’s guitarist. Taking cues from the now highly sought-after “Japanese Vintage” reissues from the early ‘80s, JV Modified guitars are a refined take on a modern classic.', 'PRS SE Hollowbody', '665126_CP_.jpg');
 
 --
 -- Indexes for dumped tables
@@ -163,19 +156,19 @@ ALTER TABLE `products2`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `final2`
 --
 ALTER TABLE `final2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `products2`
 --
 ALTER TABLE `products2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

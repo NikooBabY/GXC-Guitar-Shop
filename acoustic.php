@@ -17,7 +17,7 @@ $userdata = $result->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <title>Products</title>
+    <title>Acoustics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +45,7 @@ $userdata = $result->fetch_assoc();
                 <a href="#"<button type="button" class="btn btn-outline-info ">Add to Cart</button></a>
             
                 <?php if($userdata['admin'] == 1) { ?>
-                <a href="action.php?product_del_id=<?php echo $data['id'];?>" style="text-decoration: none;">Delete</a>
+                <a href="action.php?product_del_id=<?php echo $data['id'];?>" style="text-decoration: none;" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
                 <a href="update.php?id=<?php echo $data['id']; ?>" style="text-decoration: none;">Update</a>
                 <?php } ?>
             </div>

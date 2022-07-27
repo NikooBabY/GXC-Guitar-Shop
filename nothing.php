@@ -17,7 +17,7 @@ $userdata = $result->fetch_assoc();
     <title>Document</title>
 </head>
 <body>
-    <?php include('navbar2.php') ?> 
+    <?php include('navbar.php') ?> 
     <div class="container">
             <div class="row" style= "margin-top: 10px;">
                 <div class="col-md-12" >

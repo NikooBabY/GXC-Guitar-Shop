@@ -22,7 +22,7 @@ include ('database.php');
     <!--<link type="text/css" rel="stylesheet" href="card.css" --> 
     <link type="text/css" rel="stylesheet" href="start.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>GXC Guitars</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +101,7 @@ include ('database.php');
                 <a href="singleprodisp.php?id=<?php echo $data['id'] ?> " style="text-decoration: none; color: black;"><p><?php echo $data['model'] ?><p></a>
                 <?php
                     if($userdata['admin'] == 1) { ?>
-                    <a href="action.php?product_del_id=<?php echo $data['id'];?>" style="text-decoration: none;" >Delete</a>
+                    <a href="action.php?product_del_id=<?php echo $data['id'];?>" style="text-decoration: none;" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
                     </br>
                     <a href="update.php?id=<?php echo $data['id']; ?>" style="text-decoration: none;">Update</a>
                 <?php } ?>
